@@ -3,7 +3,7 @@ def gv
 
 pipeline{
   // agent refers jenkins master or slave/node
-  agent:any
+  agent any
   
   parameters{
     // these are sample params i define here for you to show how to call inside stages
