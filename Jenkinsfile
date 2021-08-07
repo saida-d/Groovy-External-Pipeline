@@ -20,12 +20,36 @@ pipeline{
         }
       }
     }
-    stage('build'){
+    stage('checkout'){
       steps{
         script{
-          gv.buildStage()
+          gv.stageCheckout()
         }
       }
     }
+    stage('build'){
+      steps{
+        script{
+          gv.stageBuild()
+        }
+      }
+    }
+    stage('Testing'){
+      steps{
+        script{
+         gv.stageTest()
+        }
+      }
+    }
+    
+     stage('Prod.Deploy'){
+      steps{
+        script{
+         gv.stageProdDeploy()
+        }
+      }
+    }
+    
+    
   }
 }
