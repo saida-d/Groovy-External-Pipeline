@@ -1,3 +1,4 @@
+
 // block could be your git repo
 def stageCheckout(){
   echo "Repository checkout stage - Completed"
@@ -16,7 +17,7 @@ def stageTest(){
 
 // block for production deploy /k8s/docker swarm deploy
 def stageProdDeploy(){
-  echo "Production deploy - Completed"
+  echo "Production deploy - Completed & version is ${params.VERSION}"
 
 }
 
